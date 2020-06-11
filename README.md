@@ -1,9 +1,9 @@
-# nRFMicro
+# nRFMicro by joric
 
 Project wiki: https://github.com/joric/nrfmicro/wiki
 
-## Pictures
-
-![](hardware/front.png)
-![](hardware/back.png)
+# Modifications
+- Rounded corners
+- Removed micro usb
+- Added breakouts to: 
 
