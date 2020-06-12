@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:nrfmicro-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -134,28 +133,6 @@ Wire Notes Line
 	4450 5850 4450 7700
 Text Notes 3350 6200 0    60   ~ 0
 Power and Filtering
-Wire Wire Line
-	8400 950  8450 950 
-Wire Wire Line
-	8100 1550 8100 1600
-Wire Wire Line
-	8100 1600 8450 1600
-Wire Wire Line
-	8400 1250 8450 1250
-Wire Wire Line
-	8400 1150 8450 1150
-NoConn ~ 8400 1350
-$Comp
-L nrfmicro-rescue:GND #PWR018
-U 1 1 5B15A2E1
-P 8450 1600
-F 0 "#PWR018" H 8450 1350 50  0001 C CNN
-F 1 "GND" H 8450 1450 50  0000 C CNN
-F 2 "" H 8450 1600 50  0001 C CNN
-F 3 "" H 8450 1600 50  0001 C CNN
-	1    8450 1600
-	0    -1   -1   0   
-$EndComp
 Text Notes 2250 4450 0    60   ~ 0
 LiPo Charging\n
 Text Notes 7550 7500 0    60   ~ 0
@@ -461,12 +438,6 @@ Wire Wire Line
 	3300 2350 3000 2350
 Wire Wire Line
 	3300 2550 3000 2550
-Text GLabel 8450 950  2    60   Input ~ 0
-VBUS
-Text GLabel 8450 1150 2    60   Input ~ 0
-DATA+
-Text GLabel 8450 1250 2    60   Input ~ 0
-DATA-
 Wire Wire Line
 	2050 5250 2150 5250
 Text Label 5350 1400 2    60   ~ 0
@@ -933,8 +904,6 @@ $EndComp
 Wire Wire Line
 	2000 6300 2350 6300
 Wire Wire Line
-	1400 6050 1475 6050
-Wire Wire Line
 	1850 6050 2000 6050
 Wire Wire Line
 	2000 6050 2000 6300
@@ -1051,17 +1020,6 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 9875 15
 	1    0    0    -1  
 $EndComp
 $Comp
-L nrfmicro-rescue:USB_OTG J1
-U 1 1 5B116606
-P 8100 1150
-F 0 "J1" H 7900 1600 50  0000 L CNN
-F 1 "USB_OTG 5 Pin 4 Legs" H 7900 1500 50  0000 L CNN
-F 2 "nrfmicro:usb_micro" H 8250 1100 50  0001 C CNN
-F 3 "" H 8250 1100 50  0001 C CNN
-	1    8100 1150
-	1    0    0    -1  
-$EndComp
-$Comp
 L nrfmicro-rescue:R R1
 U 1 1 5CC730D9
 P 2300 7100
@@ -1165,14 +1123,15 @@ Wire Wire Line
 Wire Wire Line
 	9825 2100 10175 2100
 NoConn ~ 9825 2200
-NoConn ~ 8000 1550
-Text GLabel 1400 6225 0    60   Input ~ 0
-P0.26
-Wire Wire Line
-	1400 6225 1475 6225
-Wire Wire Line
-	1475 6225 1475 6050
-Connection ~ 1475 6050
 Wire Wire Line
 	1475 6050 1550 6050
+Wire Wire Line
+	1400 6050 1475 6050
+Connection ~ 1475 6050
+Wire Wire Line
+	1475 6225 1475 6050
+Wire Wire Line
+	1400 6225 1475 6225
+Text GLabel 1400 6225 0    60   Input ~ 0
+P0.26
 $EndSCHEMATC
